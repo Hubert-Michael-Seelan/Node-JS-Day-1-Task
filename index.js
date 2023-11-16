@@ -9,7 +9,6 @@ const path = `./Files/${content}.txt`
 async function createFile() {
   try {
     await fs.writeFile(path , content);
-
     console.log("hey all");
   } catch (error) {
     console.log(err);
@@ -17,7 +16,7 @@ async function createFile() {
 }
 createFile()
 
-HTTP_SERVER.listen(PORT, "localhost", () => {
+HTTP_SERVER.listen(PORT, () => {
   console.log("Listening to port", PORT);
 });
 
